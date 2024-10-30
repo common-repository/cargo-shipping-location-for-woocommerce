@@ -1,0 +1,468 @@
+div.selected_cargo{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+div#mapmodelcargo.hidden{
+    display: none;
+}
+div#mapmodelcargo{
+    z-index: 99999999999;
+}
+div#mapmodelcargo .modal-dialog{
+    left: 0;
+}
+.blockUI#overlay {
+  background: #ffffff;
+  color: #666666;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  float: left;
+  text-align: center;
+  padding-top: 0;
+  opacity: .80;
+}
+div#mapmodelcargo #FlyingCargo_confirm {
+    position: static;
+    line-height: 18px;
+}
+.spinner {
+  margin: -16px 0 0 -16px;
+  top: 50%;
+  height: 32px;
+  width: 32px;
+  animation: rotate 0.8s infinite linear;
+  border: 5px solid firebrick;
+  border-right-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-search .input-text{
+    width: 100%;
+    box-sizing: border-box;
+}
+.modal-search {
+    position: relative;
+    margin: 0 auto;
+    max-width: 60%;
+    width: 100%;
+}
+
+/* 02-08-2022 */
+.modal-dialog {
+    box-sizing: border-box;
+}
+.modal-content .modal-header{
+    position: relative;
+}
+
+.modal-content .modal-header #modal-close,
+.modal-content .modal-header #modal-close-desc{
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    height: 30px;
+    width: 30px;
+    color: #000;
+    font-size: 30px;
+    line-height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.modal-content * {
+    box-sizing: border-box;
+}
+.modal-content .cargo-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    height: 100%;
+}
+.modal-content .cargo-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: #0000008a;
+}
+.select-wrap {
+    position: relative;
+}
+.modal .modal-dialog {
+    margin: 0 auto;
+    overflow: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 95%;
+    width: 100%;
+    max-height: 100%;
+}
+.modal .modal-content {
+    background-color: #fff;
+    width: 100%;
+    max-width: 100%;
+    min-height: 300px;
+    margin: 0 auto;
+}
+.modal .modal-title {
+    text-align: center;
+}
+.modal-header,
+div#mapmodelcargo .modal-header,
+.modal.descript .modal-header{
+    padding: 10px;
+    height: 70px;
+}
+div#mapmodelcargo .modal-body {
+    font-size: 14px;
+}
+div#mapmodelcargo .modal-body #map{
+    height: 100%;
+    width: 100%;
+}
+
+div#mapmodelcargo .modal-body #map.opened-list {
+    width: calc(100% - 400px);
+}
+div#mapmodelcargo .modal-body {
+    height: calc(100% - 70px);
+}
+
+div#mapmodelcargo .modal-content {
+    background: #fff;
+    overflow: auto;
+    border: 1px solid #0000002d;
+    width: 100%;
+    max-height: 80%;
+    height: 100%;
+}
+.cargo-map-wrap .form-row {
+    padding-left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+}
+
+.cargo-select-wrap {
+    position: relative;
+}
+
+/*.cargo-select-wrap .select2-container:last-child {*/
+/*    top: 0 !important;*/
+/*}*/
+
+/*.cargo-select-wrap .select2-container:last-child .select2-dropdown {*/
+/*    top: 60px !important;*/
+/*}*/
+.modal .modal-dialog.middle {
+    max-width: 1000px;
+}
+
+.modal .modal-dialog.wide {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.modal .modal-dialog.small {
+    max-width: 600px;
+}
+
+.open-how-it-works {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -35px;
+    background: #418ffe;
+    width: 26px;
+    height: 26px;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 26px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 21px;
+}
+
+body.map-open-popup {
+    overflow: hidden;
+}
+
+.modal.descript {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+}
+
+.modal.descript .modal-dialog {
+    margin: 30px auto;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.modal.descript .modal-dialog .modal-content {
+    background: #fff;
+    overflow: auto;
+    border: 1px solid #0000002d;
+    width: 100%;
+}
+
+.modal.descript .modal-header {
+    text-align: center;
+}
+
+.modal.descript .modal-body {
+    padding: 20px;
+}
+
+/* cargo map styles */
+.cargo_input_div {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.cargo-map-wrap .select2-container {
+    width: 100% !important;
+}
+.cargo-map-wrap .select2-container + .select2-container {
+    top: 54px !important;
+}
+.cargo-map-wrap  .select2-container + .select2-container .select2-dropdown {
+    top: 0 !important;
+}
+.cargo-map-wrap {
+    position: relative;
+}
+.modal.hidden {
+    display: none !important;
+}
+.modal.show {
+    display: block;
+}
+.cargo_input_div input[type="text"] {
+    width: 100%;
+    border-radius: 30px;
+    padding: 15px;
+    flex: 1;
+    border-style: solid;
+    border-color: #144378;
+    height: auto;
+    box-sizing: border-box;
+    line-height: 1;
+}
+.cargo_input_div button {
+    background: #257ab5;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 15px 30px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cargo_location_list_row button {
+    border-style: s;
+    background: #257ab5;
+    color: #fff;
+    border-radius: 30px;
+    float: left;
+    font-size: 15px;
+    padding: 10px 20px;
+    opacity:0;
+    transition:600ms all;
+    border: 0;
+    cursor: pointer;
+    display: none;
+}
+.cargo_location_list_row button:hover {
+    color:#fff;
+}
+.cargo_location_list_row:hover button{
+    opacity:1;
+    margin-top: -35px;
+}
+.cargo_content_main {
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.cargo_location_list {
+    flex: 1;
+    max-width: 400px;
+    border-left: 1px solid #e3e3e3;
+    overflow-y: auto;
+    height: 100%;
+    padding-top: 22px;
+    z-index: 999;
+    display: none;
+}
+.cargo_location_list {
+    scrollbar-width: thin;
+    scrollbar-color: #e0e0e0 #144378;
+}
+
+/* Works on Chrome/Edge/Safari */
+.cargo_location_list::-webkit-scrollbar {
+    width: 12px;
+}
+.cargo_location_list::-webkit-scrollbar-track {
+    background: #e0e0e0;
+
+}
+.cargo_location_list::-webkit-scrollbar-thumb {
+    background-color: #144378;
+
+    border-radius: 0px;
+    border: 0px solid #ffc600;
+}
+
+.cargo_location_list_row {
+    padding: 20px;
+    background: rgb(255,255,255);
+    background: linear-gradient(227deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 69%, rgba(235,235,235,1) 100%);
+    border-bottom: 1px solid #e3e3e3;
+    cursor: pointer;
+}
+
+.cargo_location_list_row.selected {
+    background: rgb(255,255,255);
+    background: linear-gradient(227deg, rgb(214 214 214) 0%, rgb(203 203 203) 69%, rgb(184 184 184) 100%);
+    border-bottom: 1px solid #e3e3e3;
+
+}
+.js-toggle-locations-list {
+    position: absolute;
+    z-index: 22222222;
+    background: #ccc;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.woocommerce-js .select2-container--default .select2-selection--single .select2-selection__rendered {
+    white-space: normal;
+}
+@media (max-width: 600px) {
+    .cargo_input_div input[type="text"] {
+        width: 99%;
+        padding-left: 60px;
+    }
+    div#mapmodelcargo .modal-body #map.opened-list {
+        width: 100%;
+    }
+    div#mapmodelcargo .modal-body #map.opened-list {
+        height: 60%;
+    }
+    .cargo_location_list {
+        position: relative;
+        width: 100%;
+        display:none;
+        height: 40%;
+    }
+
+
+
+    .cargo_map_section {
+        width:100%;
+    }
+
+    .cargo_inner_content {
+        margin:0;
+        width: 100%;
+        height: 100%;
+        max-width:90%;
+    }
+
+    .cargo_input_div {
+        margin:0;
+        padding: 0;
+        width: 100%;
+        position: relative;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-sizing: border-box;
+    }
+    .cargo_content_main {
+        flex-direction: column;
+    }
+    .open-how-it-works {
+        right: -30px;
+    }
+
+    .cargo_input_div button {
+        position: absolute;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: 0px;
+        left: 0;
+        height: 49px;
+    }
+
+    .cargo_header_logo {
+        width: 151px;
+        background-size: 70px;
+        display: none;
+    }
+
+    .cargo_admin .cargo_header_logo {
+        width: 50px;
+        background-size: 50px;
+        display: block;
+    }
+
+    .cargo_map_close {
+        width: 40px;
+    }
+
+    .cargo_location_list_row{
+        position: relative;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .cargo_location_list_row button,
+    .cargo_location_list_row:hover button{
+        opacity: 1;
+        margin-top: 0;
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        padding: 5px 20px;
+        display: inline-block;
+        z-index:1;
+    }
+}
